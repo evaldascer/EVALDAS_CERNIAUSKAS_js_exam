@@ -38,8 +38,9 @@ async function renderUsers() {
 
 function createCard(userObj) {
   const card = document.createElement("div");
+  card.className = "card";
   const photo = document.createElement("img");
-  const login = document.createElement("p");
+  const login = document.createElement("h3");
   photo.src = userObj.avatar_url;
   login.textContent = userObj.login;
   card.append(photo, login);
