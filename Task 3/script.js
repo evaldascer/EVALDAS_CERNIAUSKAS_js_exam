@@ -32,6 +32,7 @@ function getData() {
 
 async function renderUsers() {
   const users = await getData();
+  els.outputEl.innerHTML = "";
   users.forEach((userObj) => els.outputEl.append(createCard(userObj)));
   els.messageEl.style.display = "none";
 }

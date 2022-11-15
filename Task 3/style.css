@@ -71,6 +71,8 @@
   justify-items: center;
   align-items: center;
   background-color: white;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  border-radius: 10px;
 }
 .card img {
   width: 100%;
@@ -78,18 +80,18 @@
 }
 .card h3 {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: black;
 }
 
-/* =========   media  ============ */
-/* @media screen and (min-width: 700px) {
-  .output-cointainer #output {
+/*=========   media  ============ */
+@media screen and (min-width: 700px) {
+  #output {
     grid-template-columns: repeat(2, 1fr);
   }
-} */
+}
 @media screen and (min-width: 1024px) {
-  .output-cointainer #output {
+  #output {
     grid-template-columns: repeat(3, 1fr);
   }
 }
