@@ -19,19 +19,29 @@ const els = {
   messageEl: document.getElementById("message"),
 };
 
+els.btnEl.addEventListener("click", renderUsers);
+
+// ============================ FUNCTIONS   =============================
+
 function getData() {
   return fetch(ENDPOINT)
     .then((resp) => resp.json())
     .then((dataInJs) => dataInJs)
     .catch((err) => console.warn("Problem in getting users", err));
 }
-els.btnEl.addEventListener("click", renderUsers);
 
 async function renderUsers() {
   const users = await getData();
-  users.forEach((userObj) => {
-    els.outputEl.append(createCard(userObj));
-  });
+  users.forEach((userObj) => els.outputEl.append(createCard(userObj)));
+  els.messageEl.style.display = "none";
 }
 
-function createCard(userObj) {}
+function createCard(userObj) {
+  const card = document.createElement("div");
+  const photo = document.createElement("img");
+  const login = document.createElement("p");
+  photo.src = userObj.avatar_url;
+  login.textContent = userObj.login;
+  card.append(photo, login);
+  return card;
+}
