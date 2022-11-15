@@ -52,7 +52,7 @@
   color: #fff;
 }
 
-.output-cointainer #output {
+#output {
   width: 80%;
   margin-top: 25px;
   padding: 30px;
@@ -83,11 +83,11 @@
 }
 
 /* =========   media  ============ */
-@media screen and (min-width: 700px) {
+/* @media screen and (min-width: 700px) {
   .output-cointainer #output {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+} */
 @media screen and (min-width: 1024px) {
   .output-cointainer #output {
     grid-template-columns: repeat(3, 1fr);
