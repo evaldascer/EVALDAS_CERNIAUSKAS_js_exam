@@ -80,18 +80,24 @@
 }
 .card h3 {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
 }
 
 /*=========   media  ============ */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   #output {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .card h3 {
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1200px) {
   #output {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .card h3 {
+    font-size: 1.5rem;
   }
 }
