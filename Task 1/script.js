@@ -13,17 +13,20 @@ const els = {
   output: document.getElementById("output"),
 };
 
-els.inputForm.addEventListener("submit", (event) => {
+els.inputForm.addEventListener("submit", calculate);
+
+function calculate(event) {
   event.preventDefault();
   const inputKg = +els.inputForm.elements.search.value;
+  els.inputForm.search.value = "";
+  els.output.innerHTML = "";
   const lbBox = createBox("Pounds:", inputKg * 2.2046, "#5cb85c");
   const gBox = createBox("Grams:", inputKg / 0.001, "blue");
   const ozBox = createBox("Ounces:", inputKg * 35.274, "tomato");
   els.output.append(lbBox, gBox, ozBox);
-});
+}
 
 function createBox(title, weight, color) {
-  console.log("weight ===", weight);
   const card = document.createElement("div");
   const titleEl = document.createElement("h2");
   const weightEl = document.createElement("h3");
