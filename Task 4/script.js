@@ -10,6 +10,7 @@ būti stilizuota su CSS ir būti responsive;
 
 const ENDPOINT = "cars.json";
 const outputEl = document.getElementById("output");
+
 function getData() {
   return fetch(ENDPOINT)
     .then((resp) => resp.json())
