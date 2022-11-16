@@ -12,6 +12,5 @@ const els = {
 els.btn.addEventListener("click", counterAdd);
 
 function counterAdd() {
-  let counter = +els.state.textContent;
-  els.state.textContent = ++counter;
+  els.state.textContent = +els.state.textContent + 1;
 }
